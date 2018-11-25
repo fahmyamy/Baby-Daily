@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event.sleepEvent">
+
+    <LinearLayout
+        android:id="@+id/buttonLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:paddingTop="26dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/autoButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="Auto" />
+
+        <Button
+            android:id="@+id/manualButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Manual" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLayer"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" >
+
+    </FrameLayout>
+
+</RelativeLayout>

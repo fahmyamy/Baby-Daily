@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chatroom.ChatInfo"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/profileLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/user_image"/>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Admin222"/>
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="admin222@gmail.com"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineA"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_below="@id/profileLine"/>
+
+    <LinearLayout
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgray"
+        android:layout_below="@id/lineA">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Notifications"
+            android:textSize="16dp"
+            android:textColor="@color/mdtp_line_dark"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineB"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_below="@id/notification"/>
+
+    <LinearLayout
+        android:id="@+id/contentNoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_below="@id/lineB"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Mute Notification"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:id="@+id/muteOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:textOff="Off"
+            android:textOn="On" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineC"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_below="@id/contentNoty"/>
+
+    <LinearLayout
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/lightgray"
+        android:layout_below="@id/lineC"
+        tools:ignore="Orientation">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineD"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_below="@id/blank"/>
+
+    <LinearLayout
+        android:id="@+id/manageChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_below="@id/lineD">
+
+        <TextView
+            android:id="@+id/deleteChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Delete Chat"
+            android:textColor="@color/mdtp_red"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineE"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        android:layout_below="@id/manageChat"/>
+
+</RelativeLayout>

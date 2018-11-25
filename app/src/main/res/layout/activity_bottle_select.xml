@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".event.bottle.bottleSelect">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Type of Milk"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+        <ImageView
+            android:id="@+id/breastMilk"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/selectbmilk"/>
+
+            <ImageView
+                android:id="@+id/formulaMilk"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/selectmilk"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

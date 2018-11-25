@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".contact.SearchedProfile">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/editProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Upload Image"
+            android:src="@drawable/user_image"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="245dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:text="Username" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="212dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textRole"
+            android:drawableLeft="@drawable/ic_accessibility_black_24dp"
+            android:drawablePadding="5dp"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Role" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="154dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Email" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="79dp"
+        android:visibility="visible"
+        android:text="Add Parent" />
+
+    <Button
+        android:id="@+id/unAdd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="79dp"
+        android:visibility="gone"
+        android:text="Cancel Add Parent" />
+
+
+
+</RelativeLayout>

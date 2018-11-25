@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chatfragment.FriendFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/caregiverlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewC"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D3D3D3"
+            android:layout_marginBottom="6dp"
+            android:layout_below="@id/caregiverlist"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/entry_friend"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_below="@id/viewC"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/no_friend_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewC"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="No Friends Yet!"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

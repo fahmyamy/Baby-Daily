@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.health.baby_daily">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".UserDetailActivity"
+            android:label="User Information" />
+        <activity
+            android:name=".UserProfile"
+            android:label="Profile"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UserEditProfile"
+            android:label="Edit Profile"
+            android:parentActivityName=".UserProfile" />
+        <activity
+            android:name=".BabyActivity"
+            android:label="Baby"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.health.baby_daily.MainActivity" />
+
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_DC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BabyAddDetail"
+            android:label="Add Baby Info."
+            android:parentActivityName=".BabyActivity" />
+        <activity
+            android:name=".BabyEdit"
+            android:label="Edit Baby Profile" />
+        <activity
+            android:name=".BabyProfile"
+            android:label="Baby Profile"
+            android:parentActivityName=".BabyActivity" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="About Us"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".event.bottleSelect"
+            android:label="Bottle" />
+        <activity
+            android:name=".event.bottleEvent"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".event.sleepEvent" />
+        <activity android:name=".event.diaperEvent" />
+        <activity android:name=".event.feedEvent" />
+        <activity android:name=".event.measurementEvent" />
+        <activity
+            android:name=".event.medSelect"
+            android:label="Medicine" />
+        <activity
+            android:name=".event.medDetail"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".event.medEvent"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".event.vaccineEvent" />
+        <activity android:name=".event.appointmentEvent" />
+        <activity
+            android:name=".MiscActivity"
+            android:label="Miscellanous Event"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".reminder.reminder_main"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".reminder.ReminderAddActivity"
+            android:label="Add Reminder" />
+        <activity
+            android:name=".reminder.ReminderEditActivity"
+            android:label="Edit Reminder" />
+        <activity
+            android:name=".reminder.LicencesActivity"
+            android:label="Licenses" />
+
+        <receiver android:name=".reminder.AlarmReceiver" />
+        <receiver android:name=".reminder.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".misc.CalorieActivity"
+            android:label="Calorie"
+            android:parentActivityName=".MiscActivity" />
+        <activity
+            android:name=".misc.DiaryActivity"
+            android:label="Diary"
+            android:parentActivityName=".MiscActivity" />
+        <activity
+            android:name=".misc.DiaryAddActivity"
+            android:label=" "
+            android:parentActivityName=".misc.DiaryActivity" />
+        <activity
+            android:name=".misc.DiaryViewActivity"
+            android:parentActivityName=".misc.DiaryActivity" />
+        <activity android:name=".statistic.BottleSta">
+            <intent-filter>
+                <data
+                    android:host="bottle"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".statistic.SleepSta">
+            <intent-filter>
+                <data
+                    android:host="sleep"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".statistic.DiaperSta">
+            <intent-filter>
+                <data
+                    android:host="diaper"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".statistic.FeedSta">
+            <intent-filter>
+                <data
+                    android:host="feed"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".statistic.MedDSta" />
+        <activity android:name=".statistic.MeasurementSta" />
+        <activity android:name=".statistic.VaccineSta">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_VACCINE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".statistic.VaccineStaEdit"
+            android:parentActivityName=".statistic.VaccineSta" />
+        <activity android:name=".statistic.AppointmentSta">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_APPOINTMENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".statistic.AppointmentStaEdit"
+            android:parentActivityName=".statistic.AppointmentSta" />
+        <activity
+            android:name=".statistic.AppointmentStaQuesEdit"
+            android:parentActivityName=".statistic.AppointmentSta" />
+        <activity
+            android:name=".statistic.AppointmentStaQuesAdd"
+            android:parentActivityName=".statistic.AppointmentSta" />
+        <activity
+            android:name=".contact.SearchParent"
+            android:parentActivityName=".BabyActivity" />
+        <activity
+            android:name=".contact.SearchedProfile"
+            android:parentActivityName=".contact.SearchParent" />
+        <activity
+            android:name=".contact.CaregiverActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_PARENTNCAREGIVER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".contact.ContactList" />
+        <activity android:name=".chatroom.ChatRoom">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_CHATROOM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chatroom.ChatInfo"
+            android:parentActivityName=".chatroom.ChatRoom" />
+        <activity android:name=".guide.FirstAid" />
+        <activity
+            android:name=".guide.VidStream"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
+        <activity android:name=".docmenu.MedicalPost">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_POST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".docmenu.AddMedicalPost" />
+        <activity
+            android:name=".docmenu.createPost.ImageUpload"
+            android:parentActivityName=".docmenu.AddMedicalPost" />
+        <activity android:name=".docmenu.Gallery" />
+        <activity android:name=".docmenu.createPost.SelectImage" />
+        <activity android:name=".docmenu.createPost.PostPreview" />
+        <activity android:name=".other.ImageFullscreen" />
+        <activity android:name=".docmenu.createPost.ViewPost">
+            <intent-filter>
+                <data
+                    android:host="post"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".docmenu.createPost.UpdatePost" />
+        <activity android:name=".docmenu.createPost.UpdatePostPreview" />
+        <activity android:name=".docmenu.VideoPost">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_VIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".docmenu.uploadVideo.AddVideoPost" />
+        <activity android:name=".docmenu.uploadVideo.ViewVideo" />
+        <activity android:name=".docmenu.uploadVideo.FullscreenVideo">
+            <intent-filter>
+                <data
+                    android:host="video"
+                    android:scheme="babydaily" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".docmenu.uploadVideo.UpdateVideo" />
+        <activity
+            android:name=".contact.DoctorActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_PARENTNDOCTOR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.SearchParentV2"
+            android:parentActivityName=".contact.DoctorActivity" />
+        <activity
+            android:name=".contact.SearchedProfileV2"
+            android:parentActivityName=".contact.SearchParentV2" />
+        <activity android:name=".guide.PostProfile">
+            <intent-filter>
+                <action android:name="com.health.baby_daily_TARGET_NOTIFICATION_FOR_DOCTORFOLLOW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".guide.MedicalPost" />
+
+        <service android:name=".service.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".contact.SearchFriend" />
+        <activity android:name=".guide.VaccinePost" />
+        <activity android:name=".misc.PicknDrop" />
+        <activity android:name=".guide.BabyReport" />
+        <activity android:name=".misc.OverallD" />
+        <activity android:name=".statistic.OverallSta"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "323537473038",
+    "firebase_url": "https://babydaily-7f5aa.firebaseio.com",
+    "project_id": "babydaily-7f5aa",
+    "storage_bucket": "babydaily-7f5aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323537473038:android:153ae6eadde2d027",
+        "android_client_info": {
+          "package_name": "com.health.baby_daily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323537473038-mhs7jelo4f2u52taravpk7q0pfr2ovlv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.health.baby_daily",
+            "certificate_hash": "df0ab35671a989aa0fd64cb21379dc534838b6b4"
+          }
+        },
+        {
+          "client_id": "323537473038-3i2bh0qa9kih0196po5a81tivhalae53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.health.baby_daily",
+            "certificate_hash": "77280161bf2ed9d09e75e61e64ae856efde532e6"
+          }
+        },
+        {
+          "client_id": "323537473038-b287ivsum15s9bbmhiuref0293bgb495.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlTi_ypBK-I5mPi4OLc0JlY1ctgcgirgM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323537473038-b287ivsum15s9bbmhiuref0293bgb495.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

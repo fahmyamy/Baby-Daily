@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BabyProfile">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:stretchColumns="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/viewBabyImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:contentDescription="Upload Image"
+                    android:src="@drawable/user_image"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewFullName"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="18sp"
+                    android:gravity="right"
+                    android:text="Fullname"
+                    android:drawableStart="@drawable/ic_child_care" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewGender"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:gravity="right"
+                    android:text="Gender"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewDOB"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableStart="@drawable/ic_date_range_"
+                    android:text="Date of Birth"
+                    android:gravity="right"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/viewAge"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Age"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                    <View
+                        android:layout_width="207dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:background="#D3D3D3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Body Measurement"
+                    android:gravity="left"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewHeight"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Height"
+                    android:gravity="right"
+                    android:drawableStart="@drawable/ic_height"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewWeight"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Weight"
+                    android:gravity="right"
+                    android:drawableStart="@drawable/ic_weight"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewHead"
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="HeadC"
+                    android:gravity="right"
+                    android:drawableStart="@drawable/ic_head"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                <Button
+                    android:id="@+id/buttonEditBaby"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Edit Profile" />
+
+                <Button
+                    android:id="@+id/buttonDeleteBaby"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Delete Profile" />
+
+                <Button
+                    android:id="@+id/buttonEventBaby"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Baby's Event Statistic" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

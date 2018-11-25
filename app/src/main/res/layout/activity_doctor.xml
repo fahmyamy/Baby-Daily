@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contact.DoctorActivity">
+
+    <LinearLayout
+        android:id="@+id/lineA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/requestline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Requests"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/countRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/mdtp_white"
+                android:background="@drawable/circlebackgroundcg"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D3D3D3"
+            android:layout_below="@id/requestline"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/entry_request"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_below="@id/viewA"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/no_request_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewA"
+            android:padding="16dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="No Request Yet!"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewB"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D3D3D3"
+        android:layout_below="@+id/lineA"/>
+
+    <LinearLayout
+        android:id="@+id/caregiverlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/viewB"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctors"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewC"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D3D3D3"
+        android:layout_marginBottom="6dp"
+        android:layout_below="@id/caregiverlist"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/entry_doctor"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_below="@id/viewC"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/no_doctor_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewC"
+        android:padding="16dp"
+        android:gravity="center"
+        android:text="No Doctor Yet!"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:src="@drawable/ic_add_person"
+        app:fab_colorNormal="@color/colorPrimary"
+        app:fab_colorPressed="@color/fab_pressed"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"/>
+
+</RelativeLayout>
